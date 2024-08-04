@@ -1,0 +1,40 @@
+/* LogoAnimation.css */
+@keyframes slideInFromTopRight {
+  from {
+    transform: translate(50px, -50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTopLeft {
+  from {
+    transform: translate(-50px, -50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+#left-triangle-base,
+#left-vertical,
+#left-hypotenuse {
+  animation: slideInFromTopLeft 1s ease-out forwards;
+}
+
+#right-triangle-base,
+#right-vertical,
+#right-hypotenuse {
+  animation: slideInFromTopRight 1s ease-out forwards;
+}
+
+svg {
+  overflow: visible;
+  width: 100px;
+  height: 50px;
+}
